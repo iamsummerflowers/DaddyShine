@@ -25,7 +25,7 @@ function Hero({config=defaultConfig}) {
             {/* Badge */}
             <div className="w-fit inline-flex items-center gap-2 px-4 py-2 bg-[#DAA520]/10 border border-[#DAA520]/30 rounded-full mb-8 animate-fade-in-up">
               <span className="w-2 h-2 bg-[#DAA520] rounded-full animate-pulse"></span>
-              <span className="w-fit text-[#DAA520] text-sm font-medium">Premium Artisan Quality</span>
+              <span className="w-fit text-[#DAA520] text-sm font-medium">Premium Quality</span>
             </div>
 
             {/* Main Headline */}
