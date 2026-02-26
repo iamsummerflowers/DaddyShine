@@ -21,11 +21,11 @@ function Hero({config=defaultConfig}) {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
           </div>
 
-          <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
+          <div className="w-fit relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 border border-gold/30 rounded-full mb-8 animate-fade-in-up">
-              <span className="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
-              <span className="text-gold text-sm font-medium">Premium Artisan Quality</span>
+            <div className="w-fit inline-flex items-center gap-2 px-4 py-2 bg-[#DAA520]/10 border border-[#DAA520]/30 rounded-full mb-8 animate-fade-in-up">
+              <span className="w-2 h-2 bg-[#DAA520] rounded-full animate-pulse"></span>
+              <span className="w-fit text-[#DAA520] text-sm font-medium">Premium Artisan Quality</span>
             </div>
 
             {/* Main Headline */}
@@ -53,7 +53,7 @@ function Hero({config=defaultConfig}) {
               <a
                 href="#order"
                 onClick={scrollToOrder}
-                className="px-8 py-4 bg-gold text-black font-bold text-lg rounded-full hover:bg-gold-light transition-all transform hover:scale-105 gold-glow-hover flex items-center gap-2"
+                className="w-fit px-8 py-4 bg-[#DAA520] text-black font-bold text-lg rounded-full hover:bg-[#FFD700] transition-all transform hover:scale-105 gold-glow-hover flex items-center gap-2"
               >
                 <img 
                   src={config.popcorn_icon_url} 
@@ -70,14 +70,14 @@ function Hero({config=defaultConfig}) {
                   e.preventDefault();
                   document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="px-8 py-4 border-2 border-gold/50 text-gold font-semibold text-lg rounded-full hover:bg-gold/10 transition-all"
+                className="w-fit px-8 py-4 border-2 border-[#DAA520]/50 text-[#DAA520] font-semibold text-lg rounded-full hover:bg-[#DAA520]/10 transition-all"
               >
                 Learn More
               </a>
             </div>
 
             {/* Decorative Popcorn */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-2 opacity-50">
+            {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-2 opacity-50">
               {[...Array(5)].map((_, i) => (
                 <div
                   key={i}
@@ -85,7 +85,7 @@ function Hero({config=defaultConfig}) {
                   style={{ animationDelay: `${i * 0.1}s` }}
                 ></div>
               ))}
-            </div>
+            </div> */}
           </div>
         </section>
   );
