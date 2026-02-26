@@ -16,7 +16,7 @@ function Footer({config=defaultConfig}) {
 
   
     return (
-        <footer className="bg-black border-t border-gold/20">
+        <footer className="bg-black border-t border-[#DAA520]/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="grid md:grid-cols-4 gap-12">
               {/* Brand */}
@@ -40,7 +40,7 @@ function Footer({config=defaultConfig}) {
                       key={social}
                       href="#"
                       onClick={(e) => e.preventDefault()}
-                      className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center text-white/60 hover:bg-gold hover:text-black hover:border-gold transition-all"
+                      className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center text-white/60 hover:bg-[#DAA520] hover:text-black hover:border-[#DAA520] transition-all"
                     >
                       {social === 'instagram' && (
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -76,7 +76,7 @@ function Footer({config=defaultConfig}) {
                       <a
                         href={link.href}
                         onClick={(e) => scrollToSection(e, link.href)}
-                        className="text-white/60 hover:text-gold transition-colors"
+                        className="text-white/60 hover:text-[#DAA520] transition-colors"
                       >
                         {link.name}
                       </a>
@@ -106,13 +106,13 @@ function Footer({config=defaultConfig}) {
 
             {/* Bottom Bar */}
             <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-white/40 text-sm">
+              <p className="w-fit  mx-auto text-white/40 text-sm">
                 © {currentYear} Daddy Shines. All rights reserved.
               </p>
-              <div className="flex gap-6 text-sm">
+              {/* <div className="flex gap-6 text-sm">
                 <a href="#" onClick={(e) => e.preventDefault()} className="text-white/40 hover:text-gold transition-colors">Privacy Policy</a>
                 <a href="#" onClick={(e) => e.preventDefault()} className="text-white/40 hover:text-gold transition-colors">Terms of Service</a>
-              </div>
+              </div> */}
             </div>
           </div>
         </footer>
