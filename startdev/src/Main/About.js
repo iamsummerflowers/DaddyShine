@@ -38,15 +38,15 @@ function About({config=defaultConfig}) {
 
 
   return (
-        <section id="about" className="relative py-24 bg-cream">
+        <section id="about" className="relative py-24 bg-[#FFFEF7]">
           {/* Decorative Elements */}
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#DAA520] to-transparent"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               {/* Content */}
               <div>
-                <span className="inline-block px-4 py-1 bg-gold/20 text-gold-light rounded-full text-sm font-semibold mb-4" style={{ color: '#B8860B' }}>
+                <span className="w-fit inline-block px-4 py-1 bg-[#DAA520]/20 text-[#DAA520]-light rounded-full text-sm font-semibold mb-4" style={{ color: '#B8860B' }}>
                   About Us
                 </span>
                 <h2 
@@ -70,15 +70,15 @@ function About({config=defaultConfig}) {
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-4">
                   <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                    <div className="font-poppins font-bold text-2xl sm:text-3xl text-gold">100%</div>
+                    <div className="font-poppins font-bold text-2xl sm:text-3xl text-[#DAA520]">100%</div>
                     <div className="text-sm text-gray-600">Natural</div>
                   </div>
                   <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                    <div className="font-poppins font-bold text-2xl sm:text-3xl text-gold">5★</div>
+                    <div className="font-poppins font-bold text-2xl sm:text-3xl text-[#DAA520]">5★</div>
                     <div className="text-sm text-gray-600">Reviews</div>
                   </div>
                   <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                    <div className="font-poppins font-bold text-2xl sm:text-3xl text-gold">1K+</div>
+                    <div className="font-poppins font-bold text-2xl sm:text-3xl text-[#DAA520]">1K+</div>
                     <div className="text-sm text-gray-600">Happy Fans</div>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ function About({config=defaultConfig}) {
                     key={index}
                     className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow group"
                   >
-                    <div className="flex-shrink-0 w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-black transition-all">
+                    <div className="flex-shrink-0 w-14 h-14 bg-[#DAA520]/10 rounded-xl flex items-center justify-center text-[#DAA520] group-hover:bg-[#DAA520] group-hover:text-black transition-all">
                       {feature.icon}
                     </div>
                     <div>
