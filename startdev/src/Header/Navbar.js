@@ -41,11 +41,11 @@ function Navbar({ mobileMenuOpen, setMobileMenuOpen, config=defaultConfig }) {
                 <img 
                   src={config.popcorn_icon_url} 
                   alt="Popcorn" 
-                  className="w-8 h-8 md:w-10 md:h-10 transition-transform group-hover:scale-110"
+                  className="w-fit w-8 h-8 md:w-10 md:h-10 transition-transform group-hover:scale-110"
                   loading="lazy"
                   onerror="console.error('Image failed to load:', this.src); this.style.background='#DAA520'; this.alt='Popcorn icon';"
                 />
-                <span className="font-poppins font-bold text-xl md:text-2xl shimmer-text">
+                <span className="w-fit px-2 font-poppins font-bold text-xl md:text-2xl shimmer-text">
                   Daddy Shines
                 </span>
               </a>
@@ -57,7 +57,7 @@ function Navbar({ mobileMenuOpen, setMobileMenuOpen, config=defaultConfig }) {
                     key={link.name}
                     href={link.href}
                     onClick={(e) => scrollToSection(e, link.href)}
-                    className="font-medium text-white/80 hover:text-gold transition-colors relative group"
+                    className="w-fit font-medium text-white/80 hover:text-[#DAA520] transition-colors relative group"
                   >
                     {link.name}
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all group-hover:w-full"></span>
@@ -66,7 +66,7 @@ function Navbar({ mobileMenuOpen, setMobileMenuOpen, config=defaultConfig }) {
                 <a
                   href="#order"
                   onClick={(e) => scrollToSection(e, '#order')}
-                  className="px-5 py-2 bg-gold text-black font-semibold rounded-full hover:bg-gold-light transition-all gold-glow-hover"
+                  className="px-5 py-2 bg-[#DAA520] text-black text-center font-semibold rounded-full hover:bg-gold-light transition-all gold-glow-hover"
                 >
                   Order Now
                 </a>
@@ -75,7 +75,7 @@ function Navbar({ mobileMenuOpen, setMobileMenuOpen, config=defaultConfig }) {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 text-gold"
+                className="w-fit md:hidden p-2 text-[#DAA520]"
                 aria-label="Toggle menu"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,13 +91,13 @@ function Navbar({ mobileMenuOpen, setMobileMenuOpen, config=defaultConfig }) {
 
           {/* Mobile Menu */}
           <div className={`md:hidden transition-all duration-300 overflow-hidden ${mobileMenuOpen ? 'max-h-80' : 'max-h-0'}`}>
-            <div className="bg-dark-gray/95 backdrop-blur-md px-4 py-4 space-y-3">
+            <div className="bg-[#1F1F1F]/95 backdrop-blur-md px-4 py-4 space-y-3">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={(e) => scrollToSection(e, link.href)}
-                  className="block py-2 text-white/80 hover:text-gold transition-colors font-medium"
+                  className="block py-2 text-white/80 hover:text-[#DAA520] transition-colors font-medium"
                 >
                   {link.name}
                 </a>
@@ -105,7 +105,7 @@ function Navbar({ mobileMenuOpen, setMobileMenuOpen, config=defaultConfig }) {
               <a
                 href="#order"
                 onClick={(e) => scrollToSection(e, '#order')}
-                className="block w-full text-center px-5 py-3 bg-gold text-black font-semibold rounded-full mt-4"
+                className="mx-auto block w-full text-center px-5 py-3 bg-[#DAA520] text-black font-semibold rounded-full mt-4"
               >
                 Order Now
               </a>

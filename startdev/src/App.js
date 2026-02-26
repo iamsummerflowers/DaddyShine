@@ -122,7 +122,7 @@ function App({config=defaultConfig}) {
 
 
   return (
-    <div className="App w-full min-h-full bg-black overflow-auto">
+    <div className="w-full min-h-full bg-black overflow-auto">
       <Navbar mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} config={currentConfig} />
       <main>
         <Hero config={currentConfig} />
