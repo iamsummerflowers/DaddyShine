@@ -60,14 +60,40 @@ html {
   color: #61dafb;
 } */
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
+
+    html { scroll-behavior: smooth; }
+    .gold-glow { box-shadow: 0 0 20px rgba(218, 165, 32, 0.4); }
+    .gold-glow-hover:hover { box-shadow: 0 0 30px rgba(218, 165, 32, 0.6); }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    .shimmer-text {
+      background: linear-gradient(90deg, #DAA520 0%, #FFD700 25%, #DAA520 50%, #FFD700 75%, #DAA520 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s linear infinite;
+    }
+    .popcorn-pattern {
+      background-image: radial-gradient(circle at 20% 80%, rgba(218, 165, 32, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(218, 165, 32, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(218, 165, 32, 0.05) 0%, transparent 30%);
+    }
 
 /*---------- XXL ----------*/
 @media (min-width: 1440px) {
