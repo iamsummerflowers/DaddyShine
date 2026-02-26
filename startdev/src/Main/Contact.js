@@ -19,19 +19,19 @@ function Contact({config=defaultConfig}) {
 
 
   return (
-       <section id="contact" className="relative py-24 bg-cream">
+       <section id="contact" className="relative py-24 bg-[#FFFEF7]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
               {/* Contact Info */}
               <div>
-                <span className="inline-block px-4 py-1 bg-gold/20 rounded-full text-sm font-semibold mb-4" style={{ color: '#B8860B' }}>
+                <span className="w-fit inline-block px-4 py-1 bg-[#DAA520]/20 rounded-full text-sm font-semibold mb-4" style={{ color: '#B8860B' }}>
                   Get in Touch
                 </span>
                 <h2 
                   className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl text-black mb-6"
                   style={{ fontFamily: `${config.font_family}, Poppins, sans-serif` }}
                 >
-                  Let's <span className="text-gold">Connect</span>
+                  Let's <span className="text-[#DAA520]">Connect</span>
                 </h2>
                 <p className="text-lg text-gray-700 mb-8">
                   Have questions about our popcorn or want to place a special order? 
@@ -41,8 +41,8 @@ function Contact({config=defaultConfig}) {
                 <div className="space-y-6">
                   {/* Email */}
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 bg-[#DAA520]/20 rounded-xl flex items-center justify-center">
+                      <svg className="w-6 h-6 text-[#DAA520]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
@@ -51,7 +51,7 @@ function Contact({config=defaultConfig}) {
                       <a 
                         id="contact-email"
                         href={`mailto:${config.contact_email}`} 
-                        className="text-black font-semibold hover:text-gold transition-colors"
+                        className="text-black font-semibold hover:text-[#DAA520] transition-colors"
                       >
                         {config.contact_email}
                       </a>
@@ -60,8 +60,8 @@ function Contact({config=defaultConfig}) {
 
                   {/* Response Time */}
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 bg-[#DAA520]/20 rounded-xl flex items-center justify-center">
+                      <svg className="w-6 h-6 text-[#DAA520]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
@@ -80,7 +80,7 @@ function Contact({config=defaultConfig}) {
                           key={social}
                           href="#"
                           onClick={(e) => e.preventDefault()}
-                          className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all"
+                          className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-[#DAA520] hover:bg-[#DAA520] hover:text-black transition-all"
                         >
                           {social === 'instagram' && (
                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -105,7 +105,7 @@ function Contact({config=defaultConfig}) {
               </div>
 
               {/* Contact Form */}
-              <div className="bg-white rounded-3xl shadow-xl p-8">
+              {/* <div className="bg-white rounded-3xl shadow-xl p-8">
                 <h3 className="font-poppins font-semibold text-2xl text-black mb-6">Send us a message</h3>
                 
                 {submitted && (
@@ -161,7 +161,7 @@ function Contact({config=defaultConfig}) {
                     Send Message
                   </button>
                 </form>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
