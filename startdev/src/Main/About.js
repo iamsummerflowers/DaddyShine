@@ -102,6 +102,32 @@ function About({config=defaultConfig}) {
                 ))}
               </div>
             </div>
+
+            {/* Story Images */}
+            <div className="mt-20">
+              {/* <h3 className="font-poppins font-bold text-2xl text-black mb-8 text-center">Our Journey</h3> */}
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  { id: 1, url: config.about_image_1_url },
+                  { id: 2, url: config.about_image_2_url },
+                  { id: 3, url: config.about_image_3_url }
+                ].map((image) => (
+                  <div 
+                    key={image.id}
+                    className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all"
+                  >
+                    <img
+                      src={image.url}
+                      alt={`Story image ${image.id}`}
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                      loading="lazy"
+                      onerror="console.error('Image failed to load:', this.src); this.style.background='#DAA520'; this.alt='Image unavailable';"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
   );
