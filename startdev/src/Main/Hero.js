@@ -11,6 +11,7 @@ function Hero({config=defaultConfig}) {
         document.querySelector('#order')?.scrollIntoView({ behavior: 'smooth' });
       };
 
+      
 
   return (
         <section id="home" className="relative min-h-screen flex items-center justify-center popcorn-pattern overflow-hidden">
@@ -21,71 +22,91 @@ function Hero({config=defaultConfig}) {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold/5 rounded-full blur-3xl"></div>
           </div>
 
-          <div className="w-fit relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
-            {/* Badge */}
-            <div className="w-fit inline-flex items-center gap-2 px-4 py-2 bg-[#DAA520]/10 border border-[#DAA520]/30 rounded-full mb-8 animate-fade-in-up">
-              <span className="w-2 h-2 bg-[#DAA520] rounded-full animate-pulse"></span>
-              <span className="w-fit text-[#DAA520] text-sm font-medium">Premium Quality</span>
-            </div>
+          <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
+              <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
+                {/* Left Content */}
+                  <div className="text-center md:text-left">
+                    {/* Badge */}
+                    <div className="w-fit inline-flex items-center gap-2 px-4 py-2 bg-[#DAA520]/10 border border-[#DAA520]/30 rounded-full mb-8 animate-fade-in-up">
+                      <span className="w-2 h-2 bg-[#DAA520] rounded-full animate-pulse"></span>
+                      <span className="w-fit text-[#DAA520] text-sm font-medium">Premium Quality</span>
+                    </div>
 
-            {/* Main Headline */}
-            <h1 
-              id="hero-headline"
-              className="font-poppins font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 animate-fade-in-up"
-              style={{ animationDelay: '0.2s', fontFamily: `${config.font_family}, Poppins, sans-serif` }}
-            >
-              <span className="text-white">{config.hero_headline?.split(' ').slice(0, -1).join(' ') || 'Premium Artisan'}</span>
-              <br />
-              <span className="shimmer-text">{config.hero_headline?.split(' ').slice(-1)[0] || 'Popcorn'}</span>
-            </h1>
+                    {/* Main Headline */}
+                    <h1 
+                      id="hero-headline"
+                      className="font-poppins font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 animate-fade-in-up"
+                      style={{ animationDelay: '0.2s', fontFamily: `${config.font_family}, Poppins, sans-serif` }}
+                    >
+                      <span className="text-white">{config.hero_headline?.split(' ').slice(0, -1).join(' ') || 'Premium Artisan'}</span>
+                      <br />
+                      <span className="shimmer-text">{config.hero_headline?.split(' ').slice(-1)[0] || 'Popcorn'}</span>
+                    </h1>
 
-            {/* Tagline */}
-            <p 
-              id="hero-tagline"
-              className="text-lg sm:text-xl md:text-2xl text-white/70 max-w-2xl mx-auto mb-10 animate-fade-in-up"
-              style={{ animationDelay: '0.4s' }}
-            >
-              {config.hero_tagline}
-            </p>
+                    {/* Tagline */}
+                    <p 
+                      id="hero-tagline"
+                      className="text-lg sm:text-xl md:text-2xl text-white/70 max-w-2xl mx-auto mb-10 animate-fade-in-up"
+                      style={{ animationDelay: '0.4s' }}
+                    >
+                      {config.hero_tagline}
+                    </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <a
-                href="#order"
-                onClick={scrollToOrder}
-                className="w-fit px-8 py-4 bg-[#DAA520] text-black font-bold text-lg rounded-full hover:bg-[#FFD700] transition-all transform hover:scale-105 gold-glow-hover flex items-center gap-2"
-              >
-                <img 
-                  src={config.popcorn_icon_url} 
-                  alt="Popcorn" 
-                  className="w-5 h-5"
-                  loading="lazy"
-                  onerror="console.error('Image failed to load:', this.src);"
-                />
-                Order Now
-              </a>
-              <a
-                href="#about"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="w-fit px-8 py-4 border-2 border-[#DAA520]/50 text-[#DAA520] font-semibold text-lg rounded-full hover:bg-[#DAA520]/10 transition-all"
-              >
-                Learn More
-              </a>
-            </div>
+                    {/* CTA Buttons */}
+                    <div className="xbg-red-400 w-fit flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+                      <a
+                        href="#order"
+                        onClick={scrollToOrder}
+                        className="w-fit px-8 py-4 bg-[#DAA520] text-black font-bold text-lg rounded-full hover:bg-[#FFD700] transition-all transform hover:scale-105 gold-glow-hover flex items-center gap-2"
+                      >
+                        <img 
+                          src={config.popcorn_icon_url} 
+                          alt="Popcorn" 
+                          className="w-5 h-5"
+                          loading="lazy"
+                          onerror="console.error('Image failed to load:', this.src);"
+                        />
+                        Order Now
+                      </a>
+                      <a
+                        href="#about"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="w-fit px-8 py-4 border-2 border-[#DAA520]/50 text-[#DAA520] font-semibold text-lg rounded-full hover:bg-[#DAA520]/10 transition-all"
+                      >
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
+                    {/* Right Image */}
+                    <div className="hidden md:block animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-gradient-to-br from-gold/30 to-gold/10 rounded-3xl blur-2xl"></div>
+                        <img
+                          src={config.hero_image_url}
+                          alt="Premium popcorn"
+                          className="relative w-full h-auto rounded-3xl shadow-2xl object-cover"
+                          style={{ aspectRatio: '1/0.8' }}
+                          loading="lazy"
+                          onerror="console.error('Image failed to load:', this.src); this.style.background='#DAA520'; this.alt='Hero image unavailable';"
+                        />
+                      </div>
+                    </div>
 
-            {/* Decorative Popcorn */}
-            {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-2 opacity-50">
-              {[...Array(5)].map((_, i) => (
-                <div
-                  key={i}
-                  className="w-3 h-3 bg-gold rounded-full animate-bounce"
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                ></div>
-              ))}
-            </div> */}
+
+                  {/* Decorative Popcorn */}
+                  {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-2 opacity-50">
+                    {[...Array(5)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="w-3 h-3 bg-gold rounded-full animate-bounce"
+                        style={{ animationDelay: `${i * 0.1}s` }}
+                      ></div>
+                    ))}
+                  </div> */}
+              </div>
           </div>
         </section>
   );
